@@ -1,0 +1,13 @@
+version: '3'
+services:
+  borrow-book-admin-vue:
+    image: centos7:web_dev_envrionments
+    container_name: web_dev_envrionments
+    # 几个项目的端口都在此处添加
+    ports:
+     - 10001:10001
+    # restart: always
+    volumes:
+      - ../workspace:/workspace
+    stdin_open: true
+    tty: true
