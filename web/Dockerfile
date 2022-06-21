@@ -10,18 +10,21 @@ RUN yum install -y git \
 && yum install -y net-tools \
 && yum -y install vim
 
-# 安装node14+
+# web开发环境
+## 安装node14+
 RUN curl -sL https://rpm.nodesource.com/setup_14.x | bash - \
 && yum install -y nodejs
 
-# 全局安装yarn
+## 全局安装yarn
 RUN npm install yarn -g
 
-# 全局安装nrm
+## 全局安装nrm
 RUN npm install nrm -g 
 
-# 全局安装NVM
+## 全局安装NVM
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash - 
+
+# java环境
 
 # 创建项目文件夹
 RUN mkdir /workspace 
